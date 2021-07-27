@@ -41,14 +41,58 @@
 .input-field{
 
     border-bottom: 1px solid $text;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     padding-top: 15px;
-    
-    & input
-    [type=text],
-    [type=number]{
-        border: 0;
-        background: transparent;
-    }
+    display: inline-block;
+    position: relative;
+    width: 200px;
 
+    & input.styled
+    {
+        &[type=text],
+        &[type=number]{
+            border: 0;
+            background: transparent;
+            font-size: 16px;
+            line-height: 32px;
+            font-family: 'Roboto';
+            width: 100%;
+            
+            & ~ label{
+                pointer-events: none;
+                white-space: nowrap;
+                position: absolute;
+                left: 2px;
+                top: 23px;
+                transition: color .2s, top .2s, font-size .2s;
+            }
+
+            &::placeholder{
+                color: transparent;
+            }
+
+            &:focus, &:not(:placeholder-shown){
+
+                & ~ label{
+                    font-size: 12px;
+                    top: 5px;
+                    color: $fogged;
+                }
+            }
+        }
+    }
+}
+
+.select-wrapper.select-wrapper-custom{
+
+    padding-top: 15px;
+    display: inline-block;
+
+    & input[type=text].select-dropdown{
+        margin-bottom: 0;
+        font-size: 16px;
+        line-height: 32px;
+        height: 35px;
+        border-bottom: 1px solid black;
+    }
 }

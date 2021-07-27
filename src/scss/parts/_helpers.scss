@@ -105,7 +105,35 @@ a{
     display: none;
 }
 
-table{
+.filters{
+
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    & .h2-wrapper{
+        flex-grow: 1;
+
+        @media(max-width: $large){
+            width: 100%;
+        }
+    }
+
+    & .filter{
+        margin-left: 20px;
+
+        @media(max-width: $large){
+            margin-left: 0;
+            margin-right: 20px;
+        }
+
+        @media(max-width: $small){
+            width: 100%;
+        }
+    }
+}
+
+table.page-table{
 
     border-spacing: 0;
     width: 100%;

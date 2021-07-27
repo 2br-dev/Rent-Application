@@ -1,4 +1,4 @@
-var tabs, sidenav;
+var tabs, sidenav, datepicker, select, yearAutocomplete;
 
 $(() => {
     $('body').on('click', '.toggle-search', toggleSearch);
@@ -11,6 +11,88 @@ $(() => {
 function init(){
     tabs = M.Tabs.init(document.querySelector('.tabs'));
     sidenav = M.Sidenav.init(document.querySelector('.sidenav'));
+    datepicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
+        firstDay: 1,
+        format: 'dd mmmm yyyy',
+        i18n:{
+            'months': [
+                'Январь',
+                'Февраль',
+                'Март',
+                'Апрель',
+                'Май',
+                'Июнь',
+                'Июль',
+                'Август',
+                'Сентябрь',
+                'Октябрь',
+                'Ноябрь',
+                'Декабрь'
+            ],
+            monthsShort:[                
+                'Янв',
+                'Фев',
+                'Мрт',
+                'Апр',
+                'Май',
+                'Июн',
+                'Июл',
+                'Авг',
+                'Сен',
+                'Окт',
+                'Ноя',
+                'Дек'
+            ],
+            weekdays:[
+                'Воскресенье',
+                'Понедельник',
+                'Вторник',
+                'Среда',
+                'Четверг',
+                'Пятница',
+                'Суббота'
+            ],
+            weekdaysShort:[
+                'Вс',
+                'Пн',
+                'Вт',
+                'Ср',
+                'Чт',
+                'Пт',
+                'Сб'
+            ],
+            weekdaysAbbrev:[
+                'В',
+                'П',
+                'В',
+                'С',
+                'Ч',
+                'П',
+                'С'
+                
+            ]
+        }
+    });
+    select = M.FormSelect.init(document.querySelectorAll('select'), {
+        classes: 'select-wrapper-custom'
+    });
+    if($('.autocomplete#year').length){
+        yearAutocomplete = M.Autocomplete.init(document.querySelector('.autocomplete#year'), {
+            minLength: 0,
+            data: {
+                "2012": null,
+                "2013": null,
+                "2014": null,
+                "2015": null,
+                "2016": null,
+                "2017": null,
+                "2018": null,
+                "2019": null,
+                "2020": null,
+                "2021": null
+            }
+        })
+    }
 }
 
 
