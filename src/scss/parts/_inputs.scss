@@ -1,0 +1,54 @@
+.check-field{
+
+    & input[type=checkbox]{
+        display: none;
+
+        & ~ label{
+
+            cursor: pointer;
+            line-height: 21px;
+
+            &:before{
+                content: '\F0130';
+                font-family: 'Material Design Icons';
+                font-size: 21px;
+                color: $fogged;
+                margin-right: 6px;
+                display: inline-block;
+                transform: translateY(2px);
+            }
+
+            &:hover:before{
+                color: $text;
+            }
+        }
+
+        &:checked ~ label{
+
+            &:before{
+
+                content: '\F0133';
+                color: $success;
+            }
+
+            &:hover:before{
+                color: $success;
+            }
+        }
+    }
+}
+
+.input-field{
+
+    border-bottom: 1px solid $text;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    
+    & input
+    [type=text],
+    [type=number]{
+        border: 0;
+        background: transparent;
+    }
+
+}

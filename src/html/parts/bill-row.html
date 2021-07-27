@@ -1,0 +1,21 @@
+<tr>
+    <td class="check-field">
+        <input type="checkbox" id="check@@id">
+        <label for="check@@id"></label>
+    </td>
+    <td class="autofill">@@arendator</td>
+    <td class="autofill">@@contract_id</td>
+    <td>
+        <span contenteditable data-initial-value="@@contract_sum" class="editable @@if(modified){modified}">@@bill-sum</span>
+        <span class="currency"> ₽</span>
+        <input type="hidden" >
+    </td>
+    <td>
+        <a href="" class="restore @@if(!modified){hidden}"><i class="mdi mdi-restore"></i></a>
+    </td>
+    <td>
+        <a href="#register-payment" class="modal-trigger">
+            <i class="mdi mdi-currency-usd"></i>
+        </a>
+    </td>
+</tr>

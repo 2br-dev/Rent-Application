@@ -1,0 +1,497 @@
+[
+    {
+        "id": 0,
+        "arendator": "ООО «ТрансРегион»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 1,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 2,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 3,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 4,
+        "arendator": "Umbrella Corporation, ltd",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 5,
+        "arendator": "ООО «ТрансУралСиб»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 6,
+        "arendator": "ИП Ман",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 7,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 8,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 9,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": true,
+        "bill-sum": 12630
+    },
+    {
+        "id": 10,
+        "arendator": "Umbrella Corporation, ltd",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 11,
+        "arendator": "ООО «ТрансУралСиб»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 12,
+        "arendator": "ИП Ман",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 13,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 14,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 15,
+        "arendator": "ООО «ТрансРегион»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": true,
+        "bill-sum": 16800
+    },
+    {
+        "id": 16,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 17,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 18,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 19,
+        "arendator": "Umbrella Corporation, ltd",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 20,
+        "arendator": "ООО «ТрансУралСиб»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": true,
+        "bill-sum": 15200
+    },
+    {
+        "id": 21,
+        "arendator": "ИП Ман",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 22,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 23,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 24,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 25,
+        "arendator": "Umbrella Corporation, ltd",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 26,
+        "arendator": "ООО «ТрансУралСиб»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 27,
+        "arendator": "ИП Ман",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 28,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 29,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": true,
+        "bill-sum": 12200
+    },
+    {
+        "id": 30,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 31,
+        "arendator": "ООО «ТрансРегион»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 32,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 33,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 34,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 35,
+        "arendator": "Umbrella Corporation, ltd",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 36,
+        "arendator": "ООО «ТрансУралСиб»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "arendator": "ИП Ман",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 37,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 38,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 39,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 40,
+        "arendator": "Umbrella Corporation, ltd",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 41,
+        "arendator": "ООО «ТрансУралСиб»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 42,
+        "arendator": "ИП Ман",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 43,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 44,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 45,
+        "arendator": "ООО «ТрансРегион»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 46,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 47,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 48,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 49,
+        "arendator": "Umbrella Corporation, ltd",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 50,
+        "arendator": "ООО «ТрансУралСиб»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 51,
+        "arendator": "ИП Ман",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 52,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 53,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 54,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 55,
+        "arendator": "Umbrella Corporation, ltd",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 56,
+        "arendator": "ООО «ТрансУралСиб»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 57,
+        "arendator": "ИП Ман",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 58,
+        "arendator": "ООО «ЮгАвтоСтрой»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 59,
+        "arendator": "ИП Веселкова Инна Федоровна",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    },
+    {
+        "id": 60,
+        "arendator": "ПАО «МРСК Северного Кавказа»",
+        "contract_id": "1/110a/01-11-2019",
+        "contract_sum": 14630,
+        "modified": false,
+        "bill-sum": 14630
+    }
+]

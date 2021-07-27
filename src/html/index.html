@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('./parts/head.html', {title: 'Главная'})
+</head>
+<body>
+    @@include('./parts/header.html', {active: 'bills'})
+    <main>
+        <div class="global-section" id="main">
+            <section>
+                <div class="container">
+                    @@include('./parts/h1-wrapper.html', {title: 'Выставление счетов'})
+                    <div class="filters-wrapper">
+                        <div class="header">
+                            <ul class="tabs">
+                                <li class="tab"><a class="waves-effect" href="#active">Текущие <span class="hide-m-down"> договоры</span></a></li>
+                                <li class="tab"><a class="waves-effect" href="#archive">Архивные <span class="hide-m-down"> договоры</span></a></li>
+                            </ul>
+                        </div>
+                        <div class="filters">
+                            
+                        </div>
+                    </div>
+                    <div id="active">
+                        <table class="responsive checkbox-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Наименование организации</th>
+                                    <th>Номер договора</th>
+                                    <th>Сумма оплаты</th>
+                                    <th>Сброс</th>
+                                    <th>Оплатить</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@loop('./parts/bill-row.html', './data/bills.json')
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="archive">
+                        <table class="responsive checkbox-table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th>Наименование организации</th>
+                                    <th>Номер договора</th>
+                                    <th>Сумма оплаты</th>
+                                    <th>Сброс</th>
+                                    <th>Оплатить</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @@loop('./parts/bill-row.html', './data/bills.json')
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <div class="bottom-action">
+                <div class="check-field">
+                    <input type="checkbox" id="manual-numeration">
+                    <label for="manual-numeration">Ручная нумерация</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" class="styled" val="1" min="1" step="1">
+                </div>
+                <a href="" class="btn">Выставить счёт</a>
+            </div>
+        </div>
+    </main>
+    @@include('./parts/scripts.html')
+</body>
+</html>
