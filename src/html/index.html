@@ -1,100 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @@include('./parts/head.html', {title: 'Главная'})
+    @@include('./parts/head.html', {title: 'Реестр арендаторов'})
 </head>
 <body>
-    @@include('./parts/header.html', {active: 'bills'})
+    @@include('./parts/header.html', {active: 'rent'})
     <main>
-        <div class="global-section" id="main">
+        <div class="global-wrapper" id="rent">
             <section>
                 <div class="container">
-                    @@include('./parts/h1-wrapper.html', {title: 'Выставление счетов', exclude: true})
-                    <div class="filters-wrapper">
-                        <div class="header">
-                            <ul class="tabs">
-                                <li class="tab"><a class="waves-effect" href="#active">Текущие <span class="hide-m-down"> договоры</span></a></li>
-                                <li class="tab"><a class="waves-effect" href="#archive">Архивные <span class="hide-m-down"> договоры</span></a></li>
-                            </ul>
-                        </div>
-                        <div class="filters">
-                            <div class="h2-wrapper">
-                                <h2>Договоры аренды</h2>
+                    @@include('./parts/h1-wrapper.html', {title: 'Реестр арендаторов', exclude: false})
+                    <ul class="tabs">
+                        <li class="tab"><a href="#active">Текущие</a></li>
+                        <li class="tab"><a href="#archive">Архивные</a></li>
+                    </ul>
+                    <div class="h2-wrapper">
+                        <h2>Арендаторы</h2>
+                    </div>
+                    <div class="row flex">
+                        <div class="col xl4 l4 m12">
+                            <div id="active">
+                                <table class="page-table">
+                                    <thead>
+                                        <th>Наименование организации</th>
+                                        <th>Текущий баланс</th>
+                                    </thead>
+                                    <tbody>
+                                        @@loop('./parts/arendator-row.html', './data/bills.json')
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="input-field filter">
-                                <input type="text" class="styled datepicker" placeholder="Дата выставления счёта">
-                                <label for="">Дата выставления счёта</label>
-                            </div>
-                            <div class="filter">
-                                <select name="" id="" class="styled">
-                                    <option value="" selected>Январь</option>
-                                    <option value="">Февраль</option>
-                                    <option value="">Март</option>
-                                    <option value="">Апрель</option>
-                                    <option value="">Май</option>
-                                    <option value="">Июнь</option>
-                                    <option value="">Июль</option>
-                                    <option value="">Август</option>
-                                    <option value="">Сентябрь</option>
-                                    <option value="">Октябрь</option>
-                                    <option value="">Ноябрь</option>
-                                    <option value="">Декабрь</option>
-                                </select>
-                            </div>
-                            <div class="input-field filter">
-                                <input type="text" class="styled autocomplete" id="year" placeholder="Год">
-                                <label for="">Год</label>
+                            <div id="archive">
+                                <table class="page-table">
+                                    <thead>
+                                        <th>Наименование организации</th>
+                                        <th>Текущий баланс</th>
+                                    </thead>
+                                    <tbody>
+                                        @@loop('./parts/arendator-row.html', './data/bills.json')
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </div>
-                    <div id="active">
-                        <table class="page-table checkbox-table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Наименование организации</th>
-                                    <th>Номер договора</th>
-                                    <th>Сумма оплаты</th>
-                                    <th>Сброс</th>
-                                    <th>Оплатить</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @@loop('./parts/bill-row.html', './data/bills.json')
-                            </tbody>
-                        </table>
-                    </div>
-                    <div id="archive">
-                        <table class="page-table checkbox-table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Наименование организации</th>
-                                    <th>Номер договора</th>
-                                    <th>Сумма оплаты</th>
-                                    <th>Сброс</th>
-                                    <th>Оплатить</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @@loop('./parts/bill-row.html', './data/bills.json')
-                            </tbody>
-                        </table>
+                        <div class="col xl8 l8 hide-l-down">
+                            <div class="data-wrapper">
+                                <h2>Подробные сведения</h2>
+                                <div class="null-value-prompt hidden">
+                                    Выберите арендатора
+                                </div>
+                                <div class="data">
+                                    <article>
+                                        <div class="article-header">Данные аккаунта</div>
+                                        <div class="row">
+                                            <div class="col l2 s12 small-text">Логин</div>
+                                            <div class="col l10 s12">masterkadaj@gmail.com</div>
+                                            <div class="col l2 s12 small-text">Пароль</div>
+                                            <div class="col l10 s12" data-password="mySuperPassword">
+                                                <span class="hidden-password">•••••••••••</span>
+                                                <a href="" class="toggle-password"><i class="mdi mdi-lock"></i></a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <div class="article-header">Банковские реквизиты</div>
+                                        <div class="row">
+                                            <div class="col l2 s12 small-text">Банк</div>
+                                            <div class="col l10 s12">Байкальский банк ПАО Сбербанк г. Иркутск</div>
+                                            <div class="col l2 s12 small-text">ИНН</div>
+                                            <div class="col l4 s12">3818047830</div>
+                                            <div class="col l2 s12 small-text">КПП</div>
+                                            <div class="col l4 s12">381001001</div>
+                                            <div class="col l2 s12 small-text">ОГРН/(ИП)</div>
+                                            <div class="col l4 s12">1173850003172</div>
+                                            <div class="col l2 s12 small-text">БИК</div>
+                                            <div class="col l4 s12">042520607</div>
+                                            <div class="col l2 s12 small-text">Р/С</div>
+                                            <div class="col l4 s12">40702810418350016506</div>
+                                            <div class="col l2 s12 small-text">К/С</div>
+                                            <div class="col l4 s12">3010181090000000607</div>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <div class="article-header">Контактная информация</div>
+                                        <div class="row">
+                                            <div class="col m4 s12 small-text">Телефоны</div>
+                                            <div class="col m8 s12">
+                                                <div class="dropdown-wrapper">
+                                                    <a href="">+7 918 084 9370 <i class="mdi mdi-more"></i></a>
+                                                    <ul class="dropdown hidden">
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col m4 s12 small-text">E-mail</div>
+                                            <div class="col m8 s12">
+                                                <div class="dropdown-wrapper">
+                                                    <a href="">masterkadaj@gmail.com <i class="mdi mdi-more"></i></a>
+                                                    <ul class="dropdown hidden">
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col l2 s12 small-text">Почтовый адрес</div>
+                                            <div class="col l10 s12">666780 Иркутская обл., г. Усть-Кут, Комсомольский пер., 1, кроп. А, кв. 50</div>
+                                            <div class="col l2 s12 small-text">Юр. адрес</div>
+                                            <div class="col l10 s12">666780 Иркутская обл., г. Усть-Кут, Комсомольский пер., 1, кроп. А, кв. 50</div>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <div class="article-header">Информация по договорам</div>
+                                        <table class="page-table">
+                                            <thead>
+                                                <th>Номер</th>
+                                                <th>Строение/номер</th>
+                                                <th>Площадь</th>
+                                                <th>Сумма</th>
+                                                <th>Дата окончания</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1/103a/01-04-2021 от 01.04.2021</td>
+                                                    <td>106 / 3, 4</td>
+                                                    <td>35,4 м²</td>
+                                                    <td>66 220.00₽</td>
+                                                    <td class="normal">28.02.2022</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1/103a/01-04-2021 от 01.04.2021</td>
+                                                    <td>106 / 3, 4</td>
+                                                    <td>35,4 м²</td>
+                                                    <td>66 220.00₽</td>
+                                                    <td class="warning">28.02.2022</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1/103a/01-04-2021 от 01.04.2021</td>
+                                                    <td>106 / 3, 4</td>
+                                                    <td>35,4 м²</td>
+                                                    <td>66 220.00₽</td>
+                                                    <td class="finished">28.02.2022</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <div class="bottom-action">
-                <div class="check-field">
-                    <input type="checkbox" id="manual-numeration">
-                    <label for="manual-numeration">Ручная нумерация</label>
-                </div>
-                <div class="input-field">
-                    <input type="number" class="styled" val="1" min="1" step="1">
-                </div>
-                <a href="" class="btn">Выставить счёт</a>
-            </div>
         </div>
     </main>
+    <ul class="sidenav" id="details">
+        <li>
+            <a class="waves-effect details-trigger active">Платежная информация</a>
+            <ul>
+                <li><a><span class="key">ЮЛ</span><span class="value">ПАО «МРСК Северного Кавказа»</span></a></li>
+                <li><a><span class="key">Банк</span><span class="value">Байкальский банк ПАО Сбербанк г. Иркутск</span></a></li>
+                <li><a><span class="key">ИНН</span><span class="value">3818047830</span></a></li>
+                <li><a><span class="key">КПП</span><span class="value">381001001</span></a></li>
+                <li><a><span class="key">ОГРН(ИП)</span><span class="value">1173850003172</span></a></li>
+                <li><a><span class="key">Р/С</span><span class="value">40702810418350016506</span></a></li>
+                <li><a><span class="key">К/С</span><span class="value">3010181090000000607</span></a></li>
+                <li><a><span class="key">БИК</span><span class="value">042520607</span></a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="waves-effect details-trigger">Контакты</a>
+            <ul>
+                <li><a class="fogged-text">Телефоны</a></li>
+                <li><a>+7 918 084 9370</a></li>
+                <li><a>+7 918 084 9370</a></li>
+                <li><a>+7 918 084 9370</a></li>
+                <li><a class="fogged-text">Эл. Почта</a></li>
+                <li><a>masterkadaj@gmail.com</a></li>
+                <li><a>masterkadaj@gmail.com</a></li>
+                <li><a>masterkadaj@gmail.com</a></li>
+                <li><a class="fogged-text">Адрес</a></li>
+                <li><a class="waves-effect address-trigger">666780 Иркутская обл., г. Усть-Кут, Комсомольский пер., 1, кроп. А, кв. 50</a></li>
+            </ul>
+        </li>
+    </ul>
     @@include('./parts/scripts.html')
 </body>
 </html>

@@ -22589,7 +22589,7 @@ header {
   top: 0;
   z-index: 20; }
   header nav {
-    line-height: 54px;
+    line-height: 64px;
     background: #294164;
     padding: 0 10px;
     display: flex; }
@@ -22721,7 +22721,7 @@ body [contenteditable] {
       color: #333333; }
 
 body .hidden {
-  display: none; }
+  display: none !important; }
 
 body .filters {
   margin: 20px 0;
@@ -22773,6 +22773,9 @@ body table.page-table {
       font-size: 21px; }
     body table.page-table tbody tr td ul {
       margin: 0; }
+    @media (max-width: 800px) {
+      body table.page-table tbody tr td:last-of-type {
+        text-align: right; } }
   body table.page-table tbody tr:last-of-type td {
     border-bottom: 1px solid #B9B9B9; }
   body table.page-table tbody tr:hover td {
@@ -22818,31 +22821,6 @@ body table.page-table {
           padding-left: 20px; }
         body table.page-table.checkbox-table tbody tr td:nth-child(n + 3) {
           padding-left: 40px; } }
-
-body .bottom-action {
-  position: sticky;
-  bottom: 0;
-  z-index: 20;
-  background: rgba(255, 255, 255, 0.9);
-  border-top: 1px solid #B9B9B9;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 40px 1.5rem;
-  flex-wrap: wrap;
-  box-sizing: border-box; }
-  body .bottom-action .input-field {
-    width: 40px;
-    margin: 0 20px;
-    margin-bottom: 20px; }
-  @media (max-width: 600px) {
-    body .bottom-action {
-      display: block;
-      text-align: center; }
-      body .bottom-action .input-field {
-        width: 120px;
-        margin-left: auto;
-        margin-right: auto; } }
 
 body .critical-text {
   color: #B60000 !important; }
@@ -22933,6 +22911,9 @@ body .modal {
 
 body .no-margin {
   margin: 0 !important; }
+
+body .fogged-text {
+  color: #B9B9B9 !important; }
 
 .check-field input[type=checkbox] {
   display: none; }
@@ -23123,3 +23104,82 @@ body.keyboard-focused .select-dropdown.dropdown-content li:focus {
     color: rgba(0, 0, 0, 0.4); }
   .select-dropdown li.optgroup ~ li.optgroup-option {
     padding-left: 1rem; }
+
+.global-wrapper#rent .data-wrapper {
+  position: sticky;
+  top: 122px; }
+  .global-wrapper#rent .data-wrapper .null-value-prompt {
+    border: 1px dashed #B9B9B9;
+    color: #B9B9B9;
+    text-transform: uppercase;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.global-wrapper#rent article .article-header {
+  display: flex;
+  align-items: center;
+  color: #B9B9B9;
+  text-transform: uppercase; }
+  .global-wrapper#rent article .article-header:after {
+    content: '';
+    display: block;
+    border-top: 1px solid #B9B9B9;
+    flex-grow: 1;
+    margin-left: 10px;
+    height: 0; }
+
+.sidenav#details a {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  .sidenav#details a .key {
+    color: #B9B9B9;
+    margin-right: 6px;
+    font-size: 10px; }
+
+.sidenav#details .details-trigger + ul li {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .2s; }
+
+.sidenav#details .details-trigger.active + ul li {
+  max-height: 50px; }
+
+table tr.arenda-row {
+  cursor: pointer; }
+  table tr.arenda-row td {
+    transition: padding .2s, border-width .2s, background-color .2s !important; }
+  table tr.arenda-row.selected td:first-of-type {
+    padding-left: 10px;
+    border-left: 4px solid #0085FF; }
+
+.global-wrapper#bills .bottom-action {
+  position: sticky;
+  bottom: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.9);
+  border-top: 1px solid #B9B9B9;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 40px 1.5rem;
+  flex-wrap: wrap;
+  box-sizing: border-box; }
+  .global-wrapper#bills .bottom-action .input-field {
+    width: 40px;
+    margin: 0 20px;
+    margin-bottom: 20px; }
+  @media (max-width: 600px) {
+    .global-wrapper#bills .bottom-action {
+      display: block;
+      text-align: center;
+      padding: 20px 1.5rem; }
+      .global-wrapper#bills .bottom-action .input-field {
+        width: 120px;
+        margin-left: auto;
+        margin-right: auto; } }

@@ -145,7 +145,7 @@ body{
     }
     
     .hidden{
-        display: none;
+        display: none !important;
     }
     
     .filters{
@@ -209,6 +209,7 @@ body{
                     padding: 8px 0;
                     border-top: 1px solid $fogged;
                     transition: background-color .2s;
+                    // white-space: nowrap;
     
                     & input{
                         min-height: unset;
@@ -227,6 +228,13 @@ body{
     
                     & ul{
                         margin: 0;
+                    }
+
+                    &:last-of-type{
+
+                        @media(max-width: $medium){
+                            text-align: right;
+                        }
                     }
                 }
         
@@ -332,38 +340,6 @@ body{
                         }
                     }
                 }
-            }
-        }
-    }
-    
-    .bottom-action{
-        position: -webkit-sticky;
-        position: sticky;
-        bottom: 0;
-        z-index: 20;
-        background: rgba(#fff, .9);
-        border-top: 1px solid $fogged;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 40px 1.5rem;
-        flex-wrap: wrap;
-        box-sizing: border-box;
-    
-        & .input-field{
-            width: 40px;
-            margin: 0 20px;
-            margin-bottom: 20px;
-        }
-    
-        @media(max-width: $small){
-            display: block;
-            text-align: center;
-    
-            & .input-field{
-                width: 120px;
-                margin-left: auto;
-                margin-right: auto;
             }
         }
     }
@@ -499,4 +475,9 @@ body{
     .no-margin{
         margin: 0 !important;
     }
+
+    .fogged-text{
+        color: $fogged !important;
+    }
+
 }

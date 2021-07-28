@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Главная</title>
+<title>Реестр арендаторов</title>
 <link rel="stylesheet" href="/css/master.css">
 </head>
 <body>
     <header>
     <nav>
         <a href="/" class="logo"></a>
-        <a href="/rent.html" class="navi-link ">Реестр арендаторов</a>
-        <a href="/bills.html" class="navi-link active">Выставление счетов</a>
+        <a href="/bills.html" class="navi-link ">Выставление счетов</a>
         <a href="/print.html" class="navi-link ">Печать документов</a>
         <a href="/history.html" class="navi-link ">История платежей</a>
         <a href="/stats.html" class="navi-link ">Статистика</a>
@@ -27,2586 +26,574 @@
     </nav>
 </header>
 <ul class="sidenav" id="mobile-menu">
-    <li><a href="">Реестр арендаторов</a></li>
-    <li><a href="">Выставление счетов</a></li>
-    <li><a href="">Печать документов</a></li>
-    <li><a href="">История платежей</a></li>
-    <li><a href="">Статистика</a></li>
-    <li><a href="">Отчёты</a></li>
+    <li><a href="/">Реестр арендаторов</a></li>
+    <li><a href="/bills.html">Выставление счетов</a></li>
+    <li><a href="/print.html">Печать документов</a></li>
+    <li><a href="/history.html">История платежей</a></li>
+    <li><a href="/stats.html">Статистика</a></li>
+    <li><a href="/reports.html">Отчёты</a></li>
 </ul>
     <main>
-        <div class="global-section" id="main">
+        <div class="global-wrapper" id="rent">
             <section>
                 <div class="container">
                     <div class="h1-wrapper">
-    <h1>Выставление счетов</h1>
+    <h1>Реестр арендаторов</h1>
+    
+        <div class="icon-wrapper">
+            <a class="toggle-search"></a>
+        </div>
+        <div class="input-wrapper">
+            <input type="text" placeholder="Поиск">
+        </div>
     
 </div>
-                    <div class="filters-wrapper">
-                        <div class="header">
-                            <ul class="tabs">
-                                <li class="tab"><a class="waves-effect" href="#active">Текущие <span class="hide-m-down"> договоры</span></a></li>
-                                <li class="tab"><a class="waves-effect" href="#archive">Архивные <span class="hide-m-down"> договоры</span></a></li>
-                            </ul>
-                        </div>
-                        <div class="filters">
-                            <div class="h2-wrapper">
-                                <h2>Договоры аренды</h2>
-                            </div>
-                            <div class="input-field filter">
-                                <input type="text" class="styled datepicker" placeholder="Дата выставления счёта">
-                                <label for="">Дата выставления счёта</label>
-                            </div>
-                            <div class="filter">
-                                <select name="" id="" class="styled">
-                                    <option value="" selected>Январь</option>
-                                    <option value="">Февраль</option>
-                                    <option value="">Март</option>
-                                    <option value="">Апрель</option>
-                                    <option value="">Май</option>
-                                    <option value="">Июнь</option>
-                                    <option value="">Июль</option>
-                                    <option value="">Август</option>
-                                    <option value="">Сентябрь</option>
-                                    <option value="">Октябрь</option>
-                                    <option value="">Ноябрь</option>
-                                    <option value="">Декабрь</option>
-                                </select>
-                            </div>
-                            <div class="input-field filter">
-                                <input type="text" class="styled autocomplete" id="year" placeholder="Год">
-                                <label for="">Год</label>
-                            </div>
-                        </div>
+                    <ul class="tabs">
+                        <li class="tab"><a href="#active">Текущие</a></li>
+                        <li class="tab"><a href="#archive">Архивные</a></li>
+                    </ul>
+                    <div class="h2-wrapper">
+                        <h2>Арендаторы</h2>
                     </div>
-                    <div id="active">
-                        <table class="page-table checkbox-table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Наименование организации</th>
-                                    <th>Номер договора</th>
-                                    <th>Сумма оплаты</th>
-                                    <th>Сброс</th>
-                                    <th>Оплатить</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-    <td class="check-field">
-        <input type="checkbox" id="check0">
-        <label for="check0"></label>
-    </td>
-    <td class="autofill">ООО «ТрансРегион»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check1">
-        <label for="check1"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check2">
-        <label for="check2"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check3">
-        <label for="check3"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check4">
-        <label for="check4"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check5">
-        <label for="check5"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check6">
-        <label for="check6"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check7">
-        <label for="check7"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check8">
-        <label for="check8"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check9">
-        <label for="check9"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable modified">12630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore "><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check10">
-        <label for="check10"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check11">
-        <label for="check11"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check12">
-        <label for="check12"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check13">
-        <label for="check13"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check14">
-        <label for="check14"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check15">
-        <label for="check15"></label>
-    </td>
-    <td class="autofill">ООО «ТрансРегион»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable modified">16800</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore "><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check16">
-        <label for="check16"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check17">
-        <label for="check17"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check18">
-        <label for="check18"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check19">
-        <label for="check19"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check20">
-        <label for="check20"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable modified">15200</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore "><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check21">
-        <label for="check21"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check22">
-        <label for="check22"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check23">
-        <label for="check23"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check24">
-        <label for="check24"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check25">
-        <label for="check25"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check26">
-        <label for="check26"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check27">
-        <label for="check27"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check28">
-        <label for="check28"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check29">
-        <label for="check29"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable modified">12200</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore "><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check30">
-        <label for="check30"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check31">
-        <label for="check31"></label>
-    </td>
-    <td class="autofill">ООО «ТрансРегион»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check32">
-        <label for="check32"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check33">
-        <label for="check33"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check34">
-        <label for="check34"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check35">
-        <label for="check35"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check36">
-        <label for="check36"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check@@id">
-        <label for="check@@id"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check37">
-        <label for="check37"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check38">
-        <label for="check38"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check39">
-        <label for="check39"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check40">
-        <label for="check40"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check41">
-        <label for="check41"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check42">
-        <label for="check42"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check43">
-        <label for="check43"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check44">
-        <label for="check44"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check45">
-        <label for="check45"></label>
-    </td>
-    <td class="autofill">ООО «ТрансРегион»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check46">
-        <label for="check46"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check47">
-        <label for="check47"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check48">
-        <label for="check48"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check49">
-        <label for="check49"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check50">
-        <label for="check50"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check51">
-        <label for="check51"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check52">
-        <label for="check52"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check53">
-        <label for="check53"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check54">
-        <label for="check54"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check55">
-        <label for="check55"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check56">
-        <label for="check56"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check57">
-        <label for="check57"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check58">
-        <label for="check58"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check59">
-        <label for="check59"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check60">
-        <label for="check60"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
+                    <div class="row flex">
+                        <div class="col xl4 l4 m12">
+                            <div id="active">
+                                <table class="page-table">
+                                    <thead>
+                                        <th>Наименование организации</th>
+                                        <th>Текущий баланс</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="arenda-row">
+    <td>ООО «ТрансРегион»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансРегион»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансРегион»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансРегион»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
 </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div id="archive">
-                        <table class="page-table checkbox-table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Наименование организации</th>
-                                    <th>Номер договора</th>
-                                    <th>Сумма оплаты</th>
-                                    <th>Сброс</th>
-                                    <th>Оплатить</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-    <td class="check-field">
-        <input type="checkbox" id="check0">
-        <label for="check0"></label>
-    </td>
-    <td class="autofill">ООО «ТрансРегион»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check1">
-        <label for="check1"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check2">
-        <label for="check2"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check3">
-        <label for="check3"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check4">
-        <label for="check4"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check5">
-        <label for="check5"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check6">
-        <label for="check6"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check7">
-        <label for="check7"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check8">
-        <label for="check8"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check9">
-        <label for="check9"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable modified">12630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore "><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check10">
-        <label for="check10"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check11">
-        <label for="check11"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check12">
-        <label for="check12"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check13">
-        <label for="check13"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check14">
-        <label for="check14"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check15">
-        <label for="check15"></label>
-    </td>
-    <td class="autofill">ООО «ТрансРегион»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable modified">16800</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore "><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check16">
-        <label for="check16"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check17">
-        <label for="check17"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check18">
-        <label for="check18"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check19">
-        <label for="check19"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check20">
-        <label for="check20"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable modified">15200</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore "><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check21">
-        <label for="check21"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check22">
-        <label for="check22"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check23">
-        <label for="check23"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check24">
-        <label for="check24"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check25">
-        <label for="check25"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check26">
-        <label for="check26"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check27">
-        <label for="check27"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check28">
-        <label for="check28"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check29">
-        <label for="check29"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable modified">12200</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore "><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check30">
-        <label for="check30"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check31">
-        <label for="check31"></label>
-    </td>
-    <td class="autofill">ООО «ТрансРегион»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check32">
-        <label for="check32"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check33">
-        <label for="check33"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check34">
-        <label for="check34"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check35">
-        <label for="check35"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check36">
-        <label for="check36"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check@@id">
-        <label for="check@@id"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check37">
-        <label for="check37"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check38">
-        <label for="check38"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check39">
-        <label for="check39"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check40">
-        <label for="check40"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check41">
-        <label for="check41"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check42">
-        <label for="check42"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check43">
-        <label for="check43"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check44">
-        <label for="check44"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check45">
-        <label for="check45"></label>
-    </td>
-    <td class="autofill">ООО «ТрансРегион»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check46">
-        <label for="check46"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check47">
-        <label for="check47"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check48">
-        <label for="check48"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check49">
-        <label for="check49"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check50">
-        <label for="check50"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check51">
-        <label for="check51"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check52">
-        <label for="check52"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check53">
-        <label for="check53"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check54">
-        <label for="check54"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check55">
-        <label for="check55"></label>
-    </td>
-    <td class="autofill">Umbrella Corporation, ltd</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check56">
-        <label for="check56"></label>
-    </td>
-    <td class="autofill">ООО «ТрансУралСиб»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check57">
-        <label for="check57"></label>
-    </td>
-    <td class="autofill">ИП Ман</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check58">
-        <label for="check58"></label>
-    </td>
-    <td class="autofill">ООО «ЮгАвтоСтрой»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check59">
-        <label for="check59"></label>
-    </td>
-    <td class="autofill">ИП Веселкова Инна Федоровна</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
-</tr><tr>
-    <td class="check-field">
-        <input type="checkbox" id="check60">
-        <label for="check60"></label>
-    </td>
-    <td class="autofill">ПАО «МРСК Северного Кавказа»</td>
-    <td class="autofill">1/110a/01-11-2019</td>
-    <td>
-        <span contenteditable data-initial-value="14630" class="editable ">14630</span>
-        <span class="currency"> ₽</span>
-        <input type="hidden" >
-    </td>
-    <td>
-        <a href="" class="restore hidden"><i class="mdi mdi-restore"></i></a>
-    </td>
-    <td class="right-align">
-        <a href="#register-payment" class="modal-trigger">
-            <i class="mdi mdi-currency-usd"></i>
-        </a>
-    </td>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div id="archive">
+                                <table class="page-table">
+                                    <thead>
+                                        <th>Наименование организации</th>
+                                        <th>Текущий баланс</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="arenda-row">
+    <td>ООО «ТрансРегион»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансРегион»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансРегион»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансРегион»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>Umbrella Corporation, ltd</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ТрансУралСиб»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Ман</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ООО «ЮгАвтоСтрой»</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ИП Веселкова Инна Федоровна</td>
+    <td>- 1 365 340.00₽</td>
+</tr><tr class="arenda-row">
+    <td>ПАО «МРСК Северного Кавказа»</td>
+    <td>- 1 365 340.00₽</td>
 </tr>
-                            </tbody>
-                        </table>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col xl8 l8 hide-l-down">
+                            <div class="data-wrapper">
+                                <h2>Подробные сведения</h2>
+                                <div class="null-value-prompt hidden">
+                                    Выберите арендатора
+                                </div>
+                                <div class="data">
+                                    <article>
+                                        <div class="article-header">Данные аккаунта</div>
+                                        <div class="row">
+                                            <div class="col l2 s12 small-text">Логин</div>
+                                            <div class="col l10 s12">masterkadaj@gmail.com</div>
+                                            <div class="col l2 s12 small-text">Пароль</div>
+                                            <div class="col l10 s12" data-password="mySuperPassword">
+                                                <span class="hidden-password">•••••••••••</span>
+                                                <a href="" class="toggle-password"><i class="mdi mdi-lock"></i></a>
+                                            </div>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <div class="article-header">Банковские реквизиты</div>
+                                        <div class="row">
+                                            <div class="col l2 s12 small-text">Банк</div>
+                                            <div class="col l10 s12">Байкальский банк ПАО Сбербанк г. Иркутск</div>
+                                            <div class="col l2 s12 small-text">ИНН</div>
+                                            <div class="col l4 s12">3818047830</div>
+                                            <div class="col l2 s12 small-text">КПП</div>
+                                            <div class="col l4 s12">381001001</div>
+                                            <div class="col l2 s12 small-text">ОГРН/(ИП)</div>
+                                            <div class="col l4 s12">1173850003172</div>
+                                            <div class="col l2 s12 small-text">БИК</div>
+                                            <div class="col l4 s12">042520607</div>
+                                            <div class="col l2 s12 small-text">Р/С</div>
+                                            <div class="col l4 s12">40702810418350016506</div>
+                                            <div class="col l2 s12 small-text">К/С</div>
+                                            <div class="col l4 s12">3010181090000000607</div>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <div class="article-header">Контактная информация</div>
+                                        <div class="row">
+                                            <div class="col m4 s12 small-text">Телефоны</div>
+                                            <div class="col m8 s12">
+                                                <div class="dropdown-wrapper">
+                                                    <a href="">+7 918 084 9370 <i class="mdi mdi-more"></i></a>
+                                                    <ul class="dropdown hidden">
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col m4 s12 small-text">E-mail</div>
+                                            <div class="col m8 s12">
+                                                <div class="dropdown-wrapper">
+                                                    <a href="">masterkadaj@gmail.com <i class="mdi mdi-more"></i></a>
+                                                    <ul class="dropdown hidden">
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                        <li><a href="">+7 918 084 9370</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col l2 s12 small-text">Почтовый адрес</div>
+                                            <div class="col l10 s12">666780 Иркутская обл., г. Усть-Кут, Комсомольский пер., 1, кроп. А, кв. 50</div>
+                                            <div class="col l2 s12 small-text">Юр. адрес</div>
+                                            <div class="col l10 s12">666780 Иркутская обл., г. Усть-Кут, Комсомольский пер., 1, кроп. А, кв. 50</div>
+                                        </div>
+                                    </article>
+                                    <article>
+                                        <div class="article-header">Информация по договорам</div>
+                                        <table class="page-table">
+                                            <thead>
+                                                <th>Номер</th>
+                                                <th>Строение/номер</th>
+                                                <th>Площадь</th>
+                                                <th>Сумма</th>
+                                                <th>Дата окончания</th>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>1/103a/01-04-2021 от 01.04.2021</td>
+                                                    <td>106 / 3, 4</td>
+                                                    <td>35,4 м²</td>
+                                                    <td>66 220.00₽</td>
+                                                    <td class="normal">28.02.2022</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1/103a/01-04-2021 от 01.04.2021</td>
+                                                    <td>106 / 3, 4</td>
+                                                    <td>35,4 м²</td>
+                                                    <td>66 220.00₽</td>
+                                                    <td class="warning">28.02.2022</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>1/103a/01-04-2021 от 01.04.2021</td>
+                                                    <td>106 / 3, 4</td>
+                                                    <td>35,4 м²</td>
+                                                    <td>66 220.00₽</td>
+                                                    <td class="finished">28.02.2022</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <div class="bottom-action">
-                <div class="check-field">
-                    <input type="checkbox" id="manual-numeration">
-                    <label for="manual-numeration">Ручная нумерация</label>
-                </div>
-                <div class="input-field">
-                    <input type="number" class="styled" val="1" min="1" step="1">
-                </div>
-                <a href="" class="btn">Выставить счёт</a>
-            </div>
         </div>
     </main>
+    <ul class="sidenav" id="details">
+        <li>
+            <a class="waves-effect details-trigger active">Платежная информация</a>
+            <ul>
+                <li><a><span class="key">ЮЛ</span><span class="value">ПАО «МРСК Северного Кавказа»</span></a></li>
+                <li><a><span class="key">Банк</span><span class="value">Байкальский банк ПАО Сбербанк г. Иркутск</span></a></li>
+                <li><a><span class="key">ИНН</span><span class="value">3818047830</span></a></li>
+                <li><a><span class="key">КПП</span><span class="value">381001001</span></a></li>
+                <li><a><span class="key">ОГРН(ИП)</span><span class="value">1173850003172</span></a></li>
+                <li><a><span class="key">Р/С</span><span class="value">40702810418350016506</span></a></li>
+                <li><a><span class="key">К/С</span><span class="value">3010181090000000607</span></a></li>
+                <li><a><span class="key">БИК</span><span class="value">042520607</span></a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="waves-effect details-trigger">Контакты</a>
+            <ul>
+                <li><a class="fogged-text">Телефоны</a></li>
+                <li><a>+7 918 084 9370</a></li>
+                <li><a>+7 918 084 9370</a></li>
+                <li><a>+7 918 084 9370</a></li>
+                <li><a class="fogged-text">Эл. Почта</a></li>
+                <li><a>masterkadaj@gmail.com</a></li>
+                <li><a>masterkadaj@gmail.com</a></li>
+                <li><a>masterkadaj@gmail.com</a></li>
+                <li><a class="fogged-text">Адрес</a></li>
+                <li><a class="waves-effect address-trigger">666780 Иркутская обл., г. Усть-Кут, Комсомольский пер., 1, кроп. А, кв. 50</a></li>
+            </ul>
+        </li>
+    </ul>
     <script src="/js/materialize.js"></script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/master.js"></script>

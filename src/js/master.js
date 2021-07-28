@@ -1,16 +1,23 @@
-var tabs, sidenav, datepicker, select, yearAutocomplete, modal;
+var tabs, sidenav, datepicker, select, yearAutocomplete, modal, detailsSidenav;
 
 $(() => {
     $('body').on('click', '.toggle-search', toggleSearch);
     $('body').on('keydown', '.editable', setEditable);
     $('body').on('click', '.restore', restoreEditable);
+    $('body').on('click', '.arenda-row', toggleDetails);
+    $('body').on('click', '.details-trigger', toggleDetailsSection);
+    $('body').on('click', '.address-trigger', openAddress);
+    $('body').on('click', '.toast-close', closeToast);
     init();
 });
 
 //= Инициализация ==================================================================================================
 function init(){
     tabs = M.Tabs.init(document.querySelector('.tabs'));
-    sidenav = M.Sidenav.init(document.querySelector('.sidenav'));
+    sidenav = M.Sidenav.init(document.querySelector('.sidenav#mobile-menu'));
+    detailsSidenav = M.Sidenav.init(document.querySelector('.sidenav#details'),{
+        edge: 'right'
+    });
     datepicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
         firstDay: 1,
         container: 'body',
@@ -99,6 +106,30 @@ function init(){
 
 
 //= Обработчики событий ============================================================================================
+function closeToast(){
+    var toast = M.Toast.getInstance($(this).parents('.toast').get(0));
+    toast.dismiss();
+}
+
+function openAddress(){
+    var address = $(this).text();
+    M.toast({html: address+'<a class="btn-flat toast-action toast-close">Закрыть</a>', displayLength: Math.infinite})
+}
+
+function toggleDetailsSection(e){
+    e?.preventDefault();
+    $('.details-trigger').removeClass('active');
+    $(this).addClass('active');
+}
+
+function toggleDetails(e){
+    e?.preventDefault();
+    $('.arenda-row').removeClass('selected');
+    $(this).addClass('selected')
+    if($(window).outerWidth() <= 1200)
+        detailsSidenav.open();
+    
+}
 function toggleSearch(e){
     $(this).parents('.h1-wrapper').toggleClass('search-visible');
 }

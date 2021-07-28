@@ -41,20 +41,11 @@ gulp.task('html', function(){
 	});
 
 gulp.task('js', function(){
-	return gulp.src('./src/js/*.js')
+	return gulp.src('./src/js/**/*.js')
 		// .pipe(uglify())
 	.pipe(babel({
 		presets: ["@babel/preset-env"]
 	}))
-	// .pipe(order([
-	// 		"materialize.js",
-	// 		"jquery.min.js",
-	// 		"jquery.lazy.js",
-	// 		"swiper-bundle.js",
-	// 		"jquery.hyphen.ru.min.js",
-	// 		"master.js",
-	// 		"brand.js"
-	// 	]))
 	.pipe(concat('master.js'))
 	.pipe(gulp.dest('./release/js/'))
 	.pipe(browserSync.stream());
@@ -64,5 +55,5 @@ gulp.task('watch', function(){
 	gulp.watch('./src/scss/**/*.scss', gulp.series('sass'));
 	gulp.watch('./release/*.html', gulp.series('html'));
 	gulp.watch('./src/html/**/*.html', gulp.series('include'));
-	gulp.watch('./src/js/*.js', gulp.series('js'));
+	gulp.watch('./src/js/**/*.js', gulp.series('js'));
 });

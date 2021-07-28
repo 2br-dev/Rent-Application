@@ -6,7 +6,7 @@
 <body>
     @@include('./parts/header.html', {active: 'bills'})
     <main>
-        <div class="global-section" id="main">
+        <div class="global-wrapper" id="bills">
             <section>
                 <div class="container">
                     @@include('./parts/h1-wrapper.html', {title: 'Выставление счетов', exclude: true})
@@ -25,7 +25,7 @@
                                 <input type="text" class="styled datepicker" placeholder="Дата выставления счёта">
                                 <label for="">Дата выставления счёта</label>
                             </div>
-                            <div class="filter">
+                            <div class="input-field filter">
                                 <select name="" id="" class="styled">
                                     <option value="" selected>Январь</option>
                                     <option value="">Февраль</option>
