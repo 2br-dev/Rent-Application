@@ -467,6 +467,18 @@ body{
 
     .modal{
 
+        position: relative;
+        position: fixed;
+
+        & .closer{
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            font-size: 21px;
+            color: $text;
+            padding: 12px;
+        }
+
         & .input-field{
             width: 100%;
         }

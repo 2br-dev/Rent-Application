@@ -22911,17 +22911,25 @@ body .actions-wrapper {
       pointer-events: all;
       transform: none; }
 
-body .modal .input-field {
-  width: 100%; }
-
-body .modal#register-payment {
-  max-width: 460px; }
-
-@media (max-width: 800px) {
-  body .modal {
+body .modal {
+  position: relative;
+  position: fixed; }
+  body .modal .closer {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-size: 21px;
+    color: #333333;
+    padding: 12px; }
+  body .modal .input-field {
     width: 100%; }
-    body .modal .modal-content {
-      padding: 12px; } }
+  body .modal#register-payment {
+    max-width: 460px; }
+  @media (max-width: 800px) {
+    body .modal {
+      width: 100%; }
+      body .modal .modal-content {
+        padding: 12px; } }
 
 body .no-margin {
   margin: 0 !important; }
