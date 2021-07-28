@@ -1,6 +1,6 @@
 "use strict";
 
-var tabs, sidenav, datepicker, select, yearAutocomplete;
+var tabs, sidenav, datepicker, select, yearAutocomplete, modal;
 $(function () {
   $('body').on('click', '.toggle-search', toggleSearch);
   $('body').on('keydown', '.editable', setEditable);
@@ -13,6 +13,7 @@ function init() {
   sidenav = M.Sidenav.init(document.querySelector('.sidenav'));
   datepicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
     firstDay: 1,
+    container: 'body',
     format: 'dd mmmm yyyy',
     i18n: {
       'months': ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль', 'Август', 'Сентябрь', 'Октябрь', 'Ноябрь', 'Декабрь'],
@@ -22,6 +23,7 @@ function init() {
       weekdaysAbbrev: ['В', 'П', 'В', 'С', 'Ч', 'П', 'С']
     }
   });
+  modal = M.Modal.init(document.querySelectorAll('.modal'));
   select = M.FormSelect.init(document.querySelectorAll('select'), {
     classes: 'select-wrapper-custom'
   });

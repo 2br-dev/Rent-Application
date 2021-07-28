@@ -4,12 +4,12 @@
     @@include('./parts/head.html', {title: 'Главная'})
 </head>
 <body>
-    @@include('./parts/header.html', {active: 'bills'})
+    @@include('./parts/header.html', {active: 'print'})
     <main>
         <div class="global-section" id="main">
             <section>
                 <div class="container">
-                    @@include('./parts/h1-wrapper.html', {title: 'Выставление счетов'})
+                    @@include('./parts/h1-wrapper.html', {title: 'Печать документов', exclude: true})
                     <div class="filters-wrapper">
                         <div class="header">
                             <ul class="tabs">
@@ -18,58 +18,69 @@
                             </ul>
                         </div>
                         <div class="filters">
-                            <div class="input-field">
-                                <input type="text" class="datepicker">
+                            <div class="h2-wrapper">
+                                <h2>Счета</h2>
+                            </div>
+                            <div class="input-field filter">
+                                <input type="text" class="styled datepicker" placeholder="Дата выставления счёта">
                                 <label for="">Дата выставления счёта</label>
+                            </div>
+                            <div class="input-field filter">
+                                <select name="" id="" class="styled">
+                                    <option value="" selected>Январь</option>
+                                    <option value="">Февраль</option>
+                                    <option value="">Март</option>
+                                    <option value="">Апрель</option>
+                                    <option value="">Май</option>
+                                    <option value="">Июнь</option>
+                                    <option value="">Июль</option>
+                                    <option value="">Август</option>
+                                    <option value="">Сентябрь</option>
+                                    <option value="">Октябрь</option>
+                                    <option value="">Ноябрь</option>
+                                    <option value="">Декабрь</option>
+                                </select>
+                            </div>
+                            <div class="input-field filter">
+                                <input type="text" class="styled autocomplete" id="year" placeholder="Год">
+                                <label for="">Год</label>
                             </div>
                         </div>
                     </div>
                     <div id="active">
-                        <table class="responsive checkbox-table">
+                        <table class="page-table checkbox-table">
                             <thead>
                                 <tr>
-                                    <th></th>
+                                    <th>Номер счёта</th>
                                     <th>Наименование организации</th>
-                                    <th>Номер договора</th>
-                                    <th>Сумма оплаты</th>
-                                    <th>Сброс</th>
-                                    <th>Оплатить</th>
+                                    <th>Сумма</th>
+                                    <th>Дата выставления</th>
+                                    <th>Действия</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @@loop('./parts/bill-row.html', './data/bills.json')
+                                @@loop('./parts/print-row.html', './data/bills.json')
                             </tbody>
                         </table>
                     </div>
                     <div id="archive">
-                        <table class="responsive checkbox-table">
+                        <table class="page-table checkbox-table">
                             <thead>
                                 <tr>
-                                    <th></th>
+                                    <th>Номер счёта</th>
                                     <th>Наименование организации</th>
-                                    <th>Номер договора</th>
-                                    <th>Сумма оплаты</th>
-                                    <th>Сброс</th>
-                                    <th>Оплатить</th>
+                                    <th>Сумма</th>
+                                    <th>Дата выставления</th>
+                                    <th>Действия</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @@loop('./parts/bill-row.html', './data/bills.json')
+                                @@loop('./parts/print-row.html', './data/bills.json')
                             </tbody>
                         </table>
                     </div>
                 </div>
             </section>
-            <div class="bottom-action">
-                <div class="check-field">
-                    <input type="checkbox" id="manual-numeration">
-                    <label for="manual-numeration">Ручная нумерация</label>
-                </div>
-                <div class="input-field">
-                    <input type="number" class="styled" val="1" min="1" step="1">
-                </div>
-                <a href="" class="btn">Выставить счёт</a>
-            </div>
         </div>
     </main>
     @@include('./parts/scripts.html')

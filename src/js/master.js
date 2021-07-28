@@ -1,4 +1,4 @@
-var tabs, sidenav, datepicker, select, yearAutocomplete;
+var tabs, sidenav, datepicker, select, yearAutocomplete, modal;
 
 $(() => {
     $('body').on('click', '.toggle-search', toggleSearch);
@@ -13,6 +13,7 @@ function init(){
     sidenav = M.Sidenav.init(document.querySelector('.sidenav'));
     datepicker = M.Datepicker.init(document.querySelectorAll('.datepicker'), {
         firstDay: 1,
+        container: 'body',
         format: 'dd mmmm yyyy',
         i18n:{
             'months': [
@@ -73,6 +74,7 @@ function init(){
             ]
         }
     });
+    modal = M.Modal.init(document.querySelectorAll('.modal'));
     select = M.FormSelect.init(document.querySelectorAll('select'), {
         classes: 'select-wrapper-custom'
     });

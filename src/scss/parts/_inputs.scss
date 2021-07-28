@@ -75,7 +75,7 @@
 
                 & ~ label{
                     font-size: 12px;
-                    top: 5px;
+                    top: 0px;
                     color: $fogged;
                 }
             }
@@ -85,14 +85,18 @@
 
 .select-wrapper.select-wrapper-custom{
 
-    padding-top: 15px;
     display: inline-block;
-
+    width: 100%;
+    
     & input[type=text].select-dropdown{
         margin-bottom: 0;
         font-size: 16px;
         line-height: 32px;
         height: 35px;
-        border-bottom: 1px solid black;
+        border-bottom: 0;
+    }
+
+    & .caret{
+        transform: translateY(8px);
     }
 }
