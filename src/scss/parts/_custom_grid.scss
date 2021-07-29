@@ -168,6 +168,40 @@ $gutter-width: 20px;		// Space between columns
 	}
 }
 
+@mixin align($align, $direction, $size){
+	@media(#{$direction}-width: $size){
+		text-align: $align;
+	}
+}
+
+.ra{
+	// up direction
+	&.s-up{@include align(right, "min", $small);}
+	&.m-up{@include align(right, "min", $medium);}
+	&.l-up{@include align(right, "min", $large);}
+	&.xl-up{@include align(right, "min", $extra-large);}
+
+	// down-direction
+	&.s-down{@include align(right, "max", $small);}
+	&.m-down{@include align(right, "max", $medium);}
+	&.l-down{@include align(right, "max", $large);}
+	&.xl-down{@include align(right, "max", $extra-large);}
+}
+
+.la{
+	// up direction
+	&.s-up{@include align(left, "min", $small);}
+	&.m-up{@include align(left, "min", $medium);}
+	&.l-up{@include align(left, "min", $large);}
+	&.xl-up{@include align(left, "min", $extra-large);}
+
+	// down-direction
+	&.s-down{@include align(left, "max", $small);}
+	&.m-down{@include align(left, "max", $medium);}
+	&.l-down{@include align(left, "max", $large);}
+	&.xl-down{@include align(left, "max", $extra-large);}
+}
+
 // Media-queries
 
 // Small

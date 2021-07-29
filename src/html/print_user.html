@@ -22,8 +22,8 @@
                                 <h2>Счета</h2>
                             </div>
                             <div class="input-field filter">
-                                <input type="text" class="styled" placeholder="Организация">
-                                <label for="">Организация</label>
+                                <input type="text" class="styled" placeholder="Номер договвора">
+                                <label for="">Номер договора</label>
                             </div>
                             <div class="input-field filter">
                                 @@include('./parts/month-selector.html')
@@ -39,14 +39,14 @@
                             <thead>
                                 <tr>
                                     <th>Номер счёта</th>
-                                    <th>Наименование организации</th>
+                                    <th>Номер договора</th>
                                     <th>Сумма</th>
                                     <th>Дата выставления</th>
                                     <th class="right-align">Действия</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @@loop('./parts/print-row.html', './data/bills.json')
+                                @@loop('./parts/print-user-row.html', './data/bills.json')
                             </tbody>
                         </table>
                     </div>

@@ -2637,6 +2637,20 @@ table.material-table {
       .tabs .tab a:hover, .tabs .tab a.active {
         background-color: transparent;
         color: #0085FF; }
+      .tabs .tab a.alert {
+        color: #B60000;
+        position: relative; }
+        .tabs .tab a.alert:after {
+          content: '';
+          display: block;
+          width: 6px;
+          height: 6px;
+          border: 1px solid red;
+          position: absolute;
+          top: 14px;
+          right: 16px;
+          border-radius: 50%;
+          background: #B60000; }
     .tabs .tab.disabled a,
     .tabs .tab.disabled a:hover {
       color: rgba(0, 133, 255, 0.4);
@@ -22392,6 +22406,70 @@ body.keyboard-focused .dropdown-content li:focus {
       .row .col.push-h12 {
         left: 100%; } }
 
+@media (min-width: 600px) {
+  .ra.s-up {
+    text-align: right; } }
+
+@media (min-width: 800px) {
+  .ra.m-up {
+    text-align: right; } }
+
+@media (min-width: 1200px) {
+  .ra.l-up {
+    text-align: right; } }
+
+@media (min-width: 1900px) {
+  .ra.xl-up {
+    text-align: right; } }
+
+@media (max-width: 600px) {
+  .ra.s-down {
+    text-align: right; } }
+
+@media (max-width: 800px) {
+  .ra.m-down {
+    text-align: right; } }
+
+@media (max-width: 1200px) {
+  .ra.l-down {
+    text-align: right; } }
+
+@media (max-width: 1900px) {
+  .ra.xl-down {
+    text-align: right; } }
+
+@media (min-width: 600px) {
+  .la.s-up {
+    text-align: left; } }
+
+@media (min-width: 800px) {
+  .la.m-up {
+    text-align: left; } }
+
+@media (min-width: 1200px) {
+  .la.l-up {
+    text-align: left; } }
+
+@media (min-width: 1900px) {
+  .la.xl-up {
+    text-align: left; } }
+
+@media (max-width: 600px) {
+  .la.s-down {
+    text-align: left; } }
+
+@media (max-width: 800px) {
+  .la.m-down {
+    text-align: left; } }
+
+@media (max-width: 1200px) {
+  .la.l-down {
+    text-align: left; } }
+
+@media (max-width: 1900px) {
+  .la.xl-down {
+    text-align: left; } }
+
 @media (max-width: 600px) {
   .hide-s-down {
     display: none; } }
@@ -22633,6 +22711,16 @@ body table.page-table {
     padding: 8px 0;
     border-top: 1px solid #B9B9B9;
     transition: background-color .2s; }
+    body table.page-table tbody tr td.actions-td {
+      padding: 0; }
+      body table.page-table tbody tr td.actions-td a.action {
+        display: inline-block;
+        width: 40px;
+        line-height: 36px;
+        text-align: center;
+        border-radius: 50%; }
+        body table.page-table tbody tr td.actions-td a.action:hover {
+          background: rgba(0, 0, 0, 0.03); }
     body table.page-table tbody tr td input {
       min-height: unset;
       display: inline-block;
@@ -22645,14 +22733,11 @@ body table.page-table {
       font-size: 21px; }
     body table.page-table tbody tr td ul {
       margin: 0; }
-    @media (max-width: 800px) {
-      body table.page-table tbody tr td:last-of-type {
-        text-align: right; } }
   body table.page-table tbody tr:last-of-type td {
     border-bottom: 1px solid #B9B9B9; }
-  body table.page-table tbody tr a {
+  body table.page-table tbody tr > td > a {
     color: #B9B9B9; }
-  body table.page-table tbody tr:hover a {
+  body table.page-table tbody tr:hover td > a {
     color: #0085FF; }
   body table.page-table tbody tr:hover td {
     background: rgba(0, 0, 0, 0.06); }
@@ -22713,8 +22798,7 @@ body .actions-wrapper {
     position: relative; }
     body .actions-wrapper > li ul {
       margin: 0 !important;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
-    body .actions-wrapper > li ul {
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
       text-align: left;
       max-width: -webkit-fit-content;
       max-width: -moz-fit-content;
@@ -22760,7 +22844,7 @@ body .actions-wrapper {
           transform: none;
           opacity: 1;
           pointer-events: all; }
-    body .actions-wrapper > li:hover > ul {
+    body .actions-wrapper > li a.actions-wrapper.active + ul {
       opacity: 1;
       pointer-events: all;
       transform: none; }
@@ -22787,6 +22871,8 @@ body .modal {
   body .modal.overflow {
     overflow: visible; }
   body .modal#register-expense {
+    max-width: 480px; }
+  body .modal#act-control {
     max-width: 480px; }
 
 body .no-margin {
@@ -22818,6 +22904,11 @@ body .fab {
   border-radius: 50%;
   background: #0085FF;
   color: #fff; }
+
+body .v-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center; }
 
 .check-field input[type=checkbox] {
   display: none; }

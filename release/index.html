@@ -38,7 +38,9 @@
         <div class="global-wrapper" id="rent">
             <section>
                 <div class="container">
-                    <div class="h1-wrapper">
+                    <div class="row v-center">
+                        <div class="col xl9 l8 m7 s12">
+                            <div class="h1-wrapper">
     <h1>Реестр арендаторов</h1>
     
         <div class="icon-wrapper">
@@ -49,12 +51,21 @@
         </div>
     
 </div>
-                    <ul class="tabs">
-                        <li class="tab"><a href="#active">Текущие</a></li>
-                        <li class="tab"><a href="#archive">Архивные</a></li>
-                    </ul>
-                    <div class="h2-wrapper">
-                        <h2>Арендаторы</h2>
+                        </div>
+                        <div class="col xl3 l4 m5 s12 ra m-up">
+                            <a href="#act-control" class="btn modal-trigger waves-effect waves-light">Сформировать акт сверки</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col s12">
+                            <ul class="tabs">
+                                <li class="tab"><a href="#active">Текущие</a></li>
+                                <li class="tab"><a href="#archive">Архивные</a></li>
+                            </ul>
+                            <div class="h2-wrapper">
+                                <h2>Арендаторы</h2>
+                            </div>
+                        </div>
                     </div>
                     <div class="row flex">
                         <div class="col xl4 l4 m12">
@@ -598,5 +609,141 @@
     <script src="/js/materialize.js"></script>
 <script src="/js/jquery.min.js"></script>
 <script src="/js/master.js"></script>
+    <div class="modal" id="register-payment">
+    <a class="modal-close closer"><i class="mdi mdi-close"></i></a>
+    <div class="modal-content">
+        <div class="row">
+            <div class="col s12">
+                <h3>Регистрация платежа</h3>
+            </div>
+        </div>
+        <div class="row no-margin">
+            <div class="col m3 s12"><div class="small-text">Адрендатор</div></div>
+            <div class="col m9 s12"><div>ПАО «МРСК Северного Кавказа»</div></div>
+        </div>
+        <div class="row no-margin">
+            <div class="col m3 s12"><div class="small-text">Договор </div></div>
+            <div class="col m9 s12"><div>2/217/20-10-2020 от 20.10.2020</div></div>
+        </div>
+        <div class="row no-margin">
+            <div class="col s12">
+                <div class="small-text">Баланс</div>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="row no-margin">
+            <div class="col m3 s12"><div class="small-text">арендатора</div></div>
+            <div class="col m9 s12"><div class="critical-text">-108 720.97₽</div></div>
+        </div>
+        <div class="row no-margin">
+            <div class="col m3 s12"><div class="small-text">по договору</div></div>
+            <div class="col m9 s12"><div class="critical-text">-108 720.97₽</div></div>
+        </div>
+        <div class="row">
+            <div class="col m3">
+                <div class="input-field">
+                    <input type="text" class="styled" placeholder="Номер платежа">
+                    <label for="">Номер</label>
+                </div>
+            </div>
+            <div class="col m4">
+                <div class="input-field">
+                    <input type="text" class="styled number-only" placeholder="Сумма">
+                    <label for="">Сумма</label>
+                </div>
+            </div>
+            <div class="col m5">
+                <div class="input-field">
+                    <input type="text" class="datepicker styled" placeholder="Дата">
+                    <label for="">Дата</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat waves-effect modal-close">Отправить</a>
+    </div>
+</div>
+<div class="modal overflow" id="register-expense">
+    <a class="modal-close closer"><i class="mdi mdi-close"></i></a>
+    <div class="modal-content">
+        <div class="row">
+            <div class="col s12">
+                <h3>Регистрация расхода</h3>
+            </div>
+            <div class="col s6">
+                <div class="input-field">
+                    <input type="text" class="styled autocomplete" id="payment-type" placeholder="Вид платежа">
+                    <label for="">Вид платежа</label>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="input-field"><input type="text" placeholder="Номер документа" class="styled">
+                    <label for="">Номер документа</label>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="input-field">
+                    <select name="" id="" class="styled">
+    <option value="" selected>Январь</option>
+    <option value="">Февраль</option>
+    <option value="">Март</option>
+    <option value="">Апрель</option>
+    <option value="">Май</option>
+    <option value="">Июнь</option>
+    <option value="">Июль</option>
+    <option value="">Август</option>
+    <option value="">Сентябрь</option>
+    <option value="">Октябрь</option>
+    <option value="">Ноябрь</option>
+    <option value="">Декабрь</option>
+</select>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="input-field">
+                    <input type="text" class="styled autocomplete" id="year" placeholder="Год">
+                    <label for="">Год</label>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="input-field"><input type="text" placeholder="Количество" class="styled">
+                    <label for="">Количество</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer"><a class="btn btn-flat waves-effect modal-close">Зарегистровать расход</a></div>
+</div>
+<div class="modal" id="act-control">
+    <div class="modal-content">
+        <div class="row">
+            <div class="col s12">
+                <h3>Формирование акта-сверки</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col m12">
+                <div class="input-field">
+                    <input type="text" placeholder="Оргианизация" class="styled">
+                    <label for="">Оргианизация</label>
+                </div>
+            </div>
+            <div class="col m6">
+                <div class="input-field">
+                    <input type="text" placeholder="Начало диапазона" class="styled datepicker">
+                    <label for="">Начало диапазона</label>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="input-field">
+                    <input type="text" placeholder="Конец диапазона" class="styled datepicker">
+                    <label for="">Конец диапазона</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer"><a class="btn btn-flat modal-close">Сформировать и открыть</a></div>
+</div>
 </body>
 </html>

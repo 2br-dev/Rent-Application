@@ -11,7 +11,7 @@
                 <div class="container">
                     <div class="row v-center">
                         <div class="col xl9 l8 m7 s12">
-                            @@include('./parts/h1-wrapper.html', {title: 'Реестр арендаторов', exclude: false})
+                            @@include('./parts/h1-wrapper.html', {title: 'Личный кабинет', exclude: true})
                         </div>
                         <div class="col xl3 l4 m5 s12 ra m-up">
                             <a href="#act-control" class="btn modal-trigger waves-effect waves-light">Сформировать акт сверки</a>
@@ -19,13 +19,13 @@
                     </div>
                     <div class="row">
                         <div class="col s12">
+                            <div class="h2-wrapper">
+                                <h2>Мои договоры</h2>
+                            </div>
                             <ul class="tabs">
                                 <li class="tab"><a href="#active">Текущие</a></li>
-                                <li class="tab"><a href="#archive">Архивные</a></li>
+                                <li class="tab"><a href="#archive" class="alert">Архивные</a></li>
                             </ul>
-                            <div class="h2-wrapper">
-                                <h2>Арендаторы</h2>
-                            </div>
                         </div>
                     </div>
                     <div class="row flex">
@@ -33,27 +33,27 @@
                             <div id="active">
                                 <table class="page-table">
                                     <thead>
-                                        <th>Наименование организации</th>
+                                        <th>Номер договора</th>
                                         <th>Текущий баланс</th>
                                     </thead>
                                     <tbody>
-                                        @@loop('./parts/arendator-row.html', './data/bills.json')
+                                        @@loop('./parts/contract-row.html', './data/contracts.json')
                                     </tbody>
                                 </table>
                             </div>
                             <div id="archive">
                                 <table class="page-table">
                                     <thead>
-                                        <th>Наименование организации</th>
+                                        <th>Номер договора</th>
                                         <th>Текущий баланс</th>
                                     </thead>
                                     <tbody>
-                                        @@loop('./parts/arendator-row.html', './data/bills.json')
+                                        @@loop('./parts/contract-row.html', './data/contracts.json')
                                     </tbody>
                                 </table>
                             </div>
                         </div>
-                        <div class="col xl8 l8 hide-l-down">
+                        <div class="col xl8 l8 s12">
                             <div class="data-wrapper">
                                 <h2>Подробные сведения</h2>
                                 <div class="null-value-prompt hidden">
@@ -75,27 +75,27 @@
                                     <article>
                                         <div class="article-header">Банковские реквизиты</div>
                                         <div class="row">
-                                            <div class="col l2 s12 small-text">Банк</div>
-                                            <div class="col l10 s12">Байкальский банк ПАО Сбербанк г. Иркутск</div>
-                                            <div class="col l2 s12 small-text">ИНН</div>
-                                            <div class="col l4 s12">3818047830</div>
-                                            <div class="col l2 s12 small-text">КПП</div>
-                                            <div class="col l4 s12">381001001</div>
-                                            <div class="col l2 s12 small-text">ОГРН/(ИП)</div>
-                                            <div class="col l4 s12">1173850003172</div>
-                                            <div class="col l2 s12 small-text">БИК</div>
-                                            <div class="col l4 s12">042520607</div>
-                                            <div class="col l2 s12 small-text">Р/С</div>
-                                            <div class="col l4 s12">40702810418350016506</div>
-                                            <div class="col l2 s12 small-text">К/С</div>
-                                            <div class="col l4 s12">3010181090000000607</div>
+                                            <div class="col l2 m2 s10 small-text">Банк</div>
+                                            <div class="col l10 m9 s12">Байкальский банк ПАО Сбербанк г. Иркутск</div>
+                                            <div class="col l2 m2 s12 small-text">ИНН</div>
+                                            <div class="col l4 m4 s12">3818047830</div>
+                                            <div class="col l2 m2 s12 small-text">КПП</div>
+                                            <div class="col l4 m4 s12">381001001</div>
+                                            <div class="col l2 m2 s12 small-text">ОГРН/(ИП)</div>
+                                            <div class="col l4 m4 s12">1173850003172</div>
+                                            <div class="col l2 m2 s12 small-text">БИК</div>
+                                            <div class="col l4 m4 s12">042520607</div>
+                                            <div class="col l2 m2 s12 small-text">Р/С</div>
+                                            <div class="col l4 m4 s12">40702810418350016506</div>
+                                            <div class="col l2 m2 s12 small-text">К/С</div>
+                                            <div class="col l4 m4 s12">3010181090000000607</div>
                                         </div>
                                     </article>
                                     <article>
                                         <div class="article-header">Контактная информация</div>
                                         <div class="row">
-                                            <div class="col m4 s12 small-text">Телефоны</div>
-                                            <div class="col m8 s12">
+                                            <div class="col m2 s12 small-text">Телефоны</div>
+                                            <div class="col m10 s12">
                                                 <div class="dropdown-wrapper">
                                                     <a href="">+7 918 084 9370 <i class="mdi mdi-more"></i></a>
                                                     <ul class="dropdown hidden">
@@ -105,8 +105,8 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <div class="col m4 s12 small-text">E-mail</div>
-                                            <div class="col m8 s12">
+                                            <div class="col m2 s12 small-text">E-mail</div>
+                                            <div class="col m10 s12">
                                                 <div class="dropdown-wrapper">
                                                     <a href="">masterkadaj@gmail.com <i class="mdi mdi-more"></i></a>
                                                     <ul class="dropdown hidden">
@@ -121,41 +121,6 @@
                                             <div class="col l2 s12 small-text">Юр. адрес</div>
                                             <div class="col l10 s12">666780 Иркутская обл., г. Усть-Кут, Комсомольский пер., 1, кроп. А, кв. 50</div>
                                         </div>
-                                    </article>
-                                    <article>
-                                        <div class="article-header">Информация по договорам</div>
-                                        <table class="page-table">
-                                            <thead>
-                                                <th>Номер</th>
-                                                <th>Строение/номер</th>
-                                                <th>Площадь</th>
-                                                <th>Сумма</th>
-                                                <th>Дата окончания</th>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>1/103a/01-04-2021 от 01.04.2021</td>
-                                                    <td>106 / 3, 4</td>
-                                                    <td>35,4 м²</td>
-                                                    <td>66 220.00₽</td>
-                                                    <td class="normal">28.02.2022</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1/103a/01-04-2021 от 01.04.2021</td>
-                                                    <td>106 / 3, 4</td>
-                                                    <td>35,4 м²</td>
-                                                    <td>66 220.00₽</td>
-                                                    <td class="warning">28.02.2022</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>1/103a/01-04-2021 от 01.04.2021</td>
-                                                    <td>106 / 3, 4</td>
-                                                    <td>35,4 м²</td>
-                                                    <td>66 220.00₽</td>
-                                                    <td class="finished">28.02.2022</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
                                     </article>
                                 </div>
                             </div>
@@ -196,6 +161,29 @@
         </li>
     </ul>
     @@include('./parts/scripts.html')
-    @@include('./parts/modals.html')
+    <div class="modal" id="act-control">
+        <div class="modal-content">
+            <div class="row">
+                <div class="col s12">
+                    <h3>Формирование акта-сверки</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col m6">
+                    <div class="input-field">
+                        <input type="text" placeholder="Начало диапазона" class="styled datepicker">
+                        <label for="">Начало диапазона</label>
+                    </div>
+                </div>
+                <div class="col s6">
+                    <div class="input-field">
+                        <input type="text" placeholder="Конец диапазона" class="styled datepicker">
+                        <label for="">Конец диапазона</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer"><a class="btn btn-flat modal-close">Сформировать и открыть</a></div>
+    </div>
 </body>
 </html>

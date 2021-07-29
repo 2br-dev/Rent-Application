@@ -8,6 +8,8 @@ $(() => {
     $('body').on('click', '.details-trigger', toggleDetailsSection);
     $('body').on('click', '.address-trigger', openAddress);
     $('body').on('click', '.toast-close', closeToast);
+    $('body').on('click', 'a.actions-wrapper', openActions);
+    $('body').on('click', clickOutside);
     init();
 });
 
@@ -128,6 +130,22 @@ function init(){
 
 
 //= Обработчики событий ============================================================================================
+function clickOutside(e){
+    
+    var path = e.originalEvent.path || (e.originalEvent.composedPath && e.originalEvent.composedPath()) || composedPath(e.originalEvent);
+    var action = $(path).filter((index, el) => {
+        return $(el).hasClass('actions-wrapper');
+    }).length;
+    if(!action){
+        $('a.actions-wrapper').removeClass('active');
+    }
+}
+
+function openActions(){
+    $('a.actions-wrapper').removeClass('active');
+    $(this).addClass('active');
+}
+
 function closeToast(){
     var toast = M.Toast.getInstance($(this).parents('.toast').get(0));
     toast.dismiss();
@@ -152,9 +170,11 @@ function toggleDetails(e){
         detailsSidenav.open();
     
 }
+
 function toggleSearch(e){
     $(this).parents('.h1-wrapper').toggleClass('search-visible');
 }
+
 function setEditable(e){
     
     let code = e.keyCode;
@@ -218,3 +238,23 @@ function restoreEditable(e){
 //         })
 //     })
 // }
+
+function composedPath (el) {
+
+    var path = [];
+
+    while (el) {
+
+        path.push(el);
+
+        if (el.tagName === 'HTML') {
+
+            path.push(document);
+            path.push(window);
+
+            return path;
+       }
+
+       el = el.parentElement;
+    }
+}

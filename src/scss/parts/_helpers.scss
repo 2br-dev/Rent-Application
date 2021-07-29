@@ -220,6 +220,23 @@ body{
                     border-top: 1px solid $fogged;
                     transition: background-color .2s;
                     // white-space: nowrap;
+
+                    &.actions-td{
+
+                        padding: 0;
+
+                        & a.action{
+                            display: inline-block;
+                            width: 40px;
+                            line-height: 36px;
+                            text-align: center;
+                            border-radius: 50%;
+
+                            &:hover{
+                                background: rgba(black, .03);
+                            }
+                        }
+                    }
     
                     & input{
                         min-height: unset;
@@ -239,13 +256,6 @@ body{
                     & ul{
                         margin: 0;
                     }
-
-                    &:last-of-type{
-
-                        @media(max-width: $medium){
-                            text-align: right;
-                        }
-                    }
                 }
         
                 &:last-of-type{
@@ -255,13 +265,13 @@ body{
                     }
                 }
 
-                & a{
+                & > td > a{
                     color: $fogged;
                 }
     
                 &:hover{
 
-                    & a{
+                    & td > a{
                         color: $secondary;
                     }
     
@@ -379,13 +389,10 @@ body{
         & > li{
     
             position: relative;
-    
+            
             & ul{
                 margin: 0 !important;
                 box-shadow: 0 1px 3px rgba(black, .4);
-            }
-    
-            & ul{
                 text-align: left;
                 max-width: fit-content;
                 position: absolute;
@@ -446,9 +453,9 @@ body{
                 }
             }
     
-            &:hover{
+            & a.actions-wrapper.active{
     
-                & > ul{
+                & + ul{
     
                     opacity: 1;
                     pointer-events: all;
@@ -496,6 +503,10 @@ body{
         &#register-expense{
             max-width: 480px;
         }
+
+        &#act-control{
+            max-width: 480px;
+        }
     }
 
     .no-margin{
@@ -530,6 +541,12 @@ body{
         border-radius: 50%;
         background: $secondary;
         color: #fff;
+    }
+
+    .v-center{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
     }
 
 }
