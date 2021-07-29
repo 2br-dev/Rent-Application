@@ -30,7 +30,16 @@ function init() {
       weekdaysAbbrev: ['В', 'П', 'В', 'С', 'Ч', 'П', 'С']
     }
   });
-  modal = M.Modal.init(document.querySelectorAll('.modal'));
+  modal = M.Modal.init(document.querySelectorAll('.modal'), {
+    onOpenStart: function onOpenStart(modal, link) {
+      var header = $(modal).find('h3');
+      var headerText = $(link).data('header');
+
+      if (headerText) {
+        header.text(headerText);
+      }
+    }
+  });
   select = M.FormSelect.init(document.querySelectorAll('select'), {
     classes: 'select-wrapper-custom'
   });
@@ -49,6 +58,21 @@ function init() {
         "2019": null,
         "2020": null,
         "2021": null
+      }
+    });
+  }
+
+  if ($('.autocomplete#payment-type').length) {
+    yearAutocomplete = M.Autocomplete.init(document.querySelector('.autocomplete#payment-type'), {
+      minLength: 0,
+      data: {
+        "Отопление": null,
+        "Горячая вода": null,
+        "Холодная вода": null,
+        "Электричество": null,
+        "Интернет/Интернет-ТВ": null,
+        "Спутниковое ТВ": null,
+        "Вывоз мусора": null
       }
     });
   }

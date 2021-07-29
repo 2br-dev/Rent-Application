@@ -61,11 +61,11 @@ body{
         overflow: hidden;
         
         & h1{
-            
             display: block;
             overflow: hidden;
             max-width: 100%;
             transition: max-width .2s;
+            line-height: 40px;
         }
     
         & .icon-wrapper{
@@ -147,12 +147,17 @@ body{
     .hidden{
         display: none !important;
     }
+
+    .flex-separator{
+        flex-grow: 1;
+    }
     
     .filters{
     
         margin: 20px 0;
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
     
         & .h2-wrapper{
             flex-grow: 1;
@@ -163,7 +168,10 @@ body{
         }
     
         & .filter{
-            margin-left: 20px;
+            
+            &:not(:first-of-type){
+                margin-left: 20px;
+            }
     
             @media(max-width: $large){
                 margin-left: 0;
@@ -172,6 +180,8 @@ body{
     
             @media(max-width: $small){
                 width: 100%;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
             }
         }
     }
@@ -244,8 +254,16 @@ body{
                         border-bottom: 1px solid $fogged;
                     }
                 }
+
+                & a{
+                    color: $fogged;
+                }
     
                 &:hover{
+
+                    & a{
+                        color: $secondary;
+                    }
     
                     & td{
     
@@ -470,6 +488,14 @@ body{
                 padding: 12px;
             }
         }
+
+        &.overflow{
+            overflow: visible;
+        }
+
+        &#register-expense{
+            max-width: 480px;
+        }
     }
 
     .no-margin{
@@ -478,6 +504,32 @@ body{
 
     .fogged-text{
         color: $fogged !important;
+    }
+
+    .dropdown-content{
+
+        min-width: fit-content;
+        & li{
+            
+            min-width: fit-content;
+            & a, span{
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .fab{
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        display: inline-block;
+        line-height: 52px;
+        width: 52px;
+        text-align: center;
+        font-size: 32px;
+        border-radius: 50%;
+        background: $secondary;
+        color: #fff;
     }
 
 }

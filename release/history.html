@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>История платежей</title>
+<link rel="stylesheet" href="/css/master.css">
+</head>
+<body>
+    <header>
+    <nav class="z-depth-1">
+        <a href="/" class="logo"></a>
+        <a href="/bills.html" class="navi-link ">Выставление счетов</a>
+        <a href="/print.html" class="navi-link ">Печать документов</a>
+        <a href="/history.html" class="navi-link active">История платежей</a>
+        <a href="/expenses.html" class="navi-link ">Расходы</a>
+        <a href="/stats.html" class="navi-link ">Статистика</a>
+        <a href="/reports.html" class="navi-link ">Отчёты</a>
+        <div class="separator"></div>
+        <div class="actions">
+            <a href="" class="logout-btn">Выход</a>
+            <a href="#mobile-menu" class="sidenav-trigger">
+                <i class="mdi mdi-menu"></i>
+            </a>
+        </div>
+    </nav>
+</header>
+<ul class="sidenav" id="mobile-menu">
+    <li><a href="/">Реестр арендаторов</a></li>
+    <li><a href="/bills.html">Выставление счетов</a></li>
+    <li><a href="/print.html">Печать документов</a></li>
+    <li><a href="/history.html">История платежей</a></li>
+    <li><a href="/stats.html">Статистика</a></li>
+    <li><a href="/reports.html">Отчёты</a></li>
+</ul>
+    <main>
+        <div class="global-wrapper" id="rent">
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <div class="col xl6 offset-xl3 l10 offset-l1 m12">
+                            <div class="h1-wrapper">
+    <h1>История платежей</h1>
+    
+</div>
+                            <div class="filters">
+                                <div class="filter input-field">
+                                    <input type="text" class="styled autocomplete" id="payment-type" placeholder="Вид платежа">
+                                    <label for="">Вид платежа</label>
+                                </div>
+                                <div class="input-field filter">
+                                    <select name="" id="" class="styled">
+    <option value="" selected>Январь</option>
+    <option value="">Февраль</option>
+    <option value="">Март</option>
+    <option value="">Апрель</option>
+    <option value="">Май</option>
+    <option value="">Июнь</option>
+    <option value="">Июль</option>
+    <option value="">Август</option>
+    <option value="">Сентябрь</option>
+    <option value="">Октябрь</option>
+    <option value="">Ноябрь</option>
+    <option value="">Декабрь</option>
+</select>
+                                </div>
+                                <div class="input-field filter">
+                                    <input type="text" class="styled autocomplete" id="year" placeholder="Год">
+                                    <label for="">Год</label>
+                                </div>
+                                <div class="flex-separator"></div>
+                                <div class="actions">
+                                    <a class="waves-effect btn btn-flat">Применить</a>
+                                </div>
+                            </div>
+                            <table class="page-table">
+                                <thead>
+                                    <th>Дата</th>
+                                    <th>Номер документа</th>
+                                    <th>Сумма</th>
+                                    <th class="right-align">Действия</th>
+                                </thead>
+                                <tbody>
+                                    <tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr><tr>
+    <td>12 августа 2020</td>
+    <td>35578364</td>
+    <td>1 365.00₽</td>
+    <td class="right-align">
+        <a href="#register-payment" class="modal-trigger" data-header="Редактирование платежа"><i class="mdi mdi-pencil"></i></a>
+        <a href=""><i class="mdi mdi-delete"></i></a>
+    </td>
+</tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <ul class="sidenav" id="details">
+        <li>
+            <a class="waves-effect details-trigger active">Платежная информация</a>
+            <ul>
+                <li><a><span class="key">ЮЛ</span><span class="value">ПАО «МРСК Северного Кавказа»</span></a></li>
+                <li><a><span class="key">Банк</span><span class="value">Байкальский банк ПАО Сбербанк г. Иркутск</span></a></li>
+                <li><a><span class="key">ИНН</span><span class="value">3818047830</span></a></li>
+                <li><a><span class="key">КПП</span><span class="value">381001001</span></a></li>
+                <li><a><span class="key">ОГРН(ИП)</span><span class="value">1173850003172</span></a></li>
+                <li><a><span class="key">Р/С</span><span class="value">40702810418350016506</span></a></li>
+                <li><a><span class="key">К/С</span><span class="value">3010181090000000607</span></a></li>
+                <li><a><span class="key">БИК</span><span class="value">042520607</span></a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="waves-effect details-trigger">Контакты</a>
+            <ul>
+                <li><a class="fogged-text">Телефоны</a></li>
+                <li><a>+7 918 084 9370</a></li>
+                <li><a>+7 918 084 9370</a></li>
+                <li><a>+7 918 084 9370</a></li>
+                <li><a class="fogged-text">Эл. Почта</a></li>
+                <li><a>masterkadaj@gmail.com</a></li>
+                <li><a>masterkadaj@gmail.com</a></li>
+                <li><a>masterkadaj@gmail.com</a></li>
+                <li><a class="fogged-text">Адрес</a></li>
+                <li><a class="waves-effect address-trigger">666780 Иркутская обл., г. Усть-Кут, Комсомольский пер., 1, кроп. А, кв. 50</a></li>
+            </ul>
+        </li>
+    </ul>
+    <script src="/js/materialize.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/master.js"></script>
+    <div class="modal" id="register-payment">
+    <a class="modal-close closer"><i class="mdi mdi-close"></i></a>
+    <div class="modal-content">
+        <div class="row">
+            <div class="col s12">
+                <h3>Регистрация платежа</h3>
+            </div>
+        </div>
+        <div class="row no-margin">
+            <div class="col m3 s12"><div class="small-text">Адрендатор</div></div>
+            <div class="col m9 s12"><div>ПАО «МРСК Северного Кавказа»</div></div>
+        </div>
+        <div class="row no-margin">
+            <div class="col m3 s12"><div class="small-text">Договор </div></div>
+            <div class="col m9 s12"><div>2/217/20-10-2020 от 20.10.2020</div></div>
+        </div>
+        <div class="row no-margin">
+            <div class="col s12">
+                <div class="small-text">Баланс</div>
+                <div class="divider"></div>
+            </div>
+        </div>
+        <div class="row no-margin">
+            <div class="col m3 s12"><div class="small-text">арендатора</div></div>
+            <div class="col m9 s12"><div class="critical-text">-108 720.97₽</div></div>
+        </div>
+        <div class="row no-margin">
+            <div class="col m3 s12"><div class="small-text">по договору</div></div>
+            <div class="col m9 s12"><div class="critical-text">-108 720.97₽</div></div>
+        </div>
+        <div class="row">
+            <div class="col m3">
+                <div class="input-field">
+                    <input type="text" class="styled" placeholder="Номер платежа">
+                    <label for="">Номер</label>
+                </div>
+            </div>
+            <div class="col m4">
+                <div class="input-field">
+                    <input type="text" class="styled number-only" placeholder="Сумма">
+                    <label for="">Сумма</label>
+                </div>
+            </div>
+            <div class="col m5">
+                <div class="input-field">
+                    <input type="text" class="datepicker styled" placeholder="Дата">
+                    <label for="">Дата</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-flat waves-effect modal-close">Отправить</a>
+    </div>
+</div>
+<div class="modal overflow" id="register-expense">
+    <a class="modal-close closer"><i class="mdi mdi-close"></i></a>
+    <div class="modal-content">
+        <div class="row">
+            <div class="col s12">
+                <h3>Регистрация расхода</h3>
+            </div>
+            <div class="col s6">
+                <div class="input-field">
+                    <input type="text" class="styled autocomplete" id="payment-type" placeholder="Вид платежа">
+                    <label for="">Вид платежа</label>
+                </div>
+            </div>
+            <div class="col s6">
+                <div class="input-field"><input type="text" placeholder="Номер документа" class="styled">
+                    <label for="">Номер документа</label>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="input-field">
+                    <select name="" id="" class="styled">
+    <option value="" selected>Январь</option>
+    <option value="">Февраль</option>
+    <option value="">Март</option>
+    <option value="">Апрель</option>
+    <option value="">Май</option>
+    <option value="">Июнь</option>
+    <option value="">Июль</option>
+    <option value="">Август</option>
+    <option value="">Сентябрь</option>
+    <option value="">Октябрь</option>
+    <option value="">Ноябрь</option>
+    <option value="">Декабрь</option>
+</select>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="input-field">
+                    <input type="text" class="styled autocomplete" id="year" placeholder="Год">
+                    <label for="">Год</label>
+                </div>
+            </div>
+            <div class="col s4">
+                <div class="input-field"><input type="text" placeholder="Количество" class="styled">
+                    <label for="">Количество</label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer"><a class="btn btn-flat waves-effect modal-close">Зарегистровать расход</a></div>
+</div>
+</body>
+</html>
